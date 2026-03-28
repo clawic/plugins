@@ -1,5 +1,5 @@
 {
-  "name": "notes",
+  "name": "notes-plugin",
   "version": "0.1.0",
   "description": "Native OpenClaw notes plugin with local note storage and writing tools",
   "type": "module",
