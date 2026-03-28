@@ -1,0 +1,13 @@
+{
+  "id": "whatsapp",
+  "name": "WhatsApp",
+  "description": "WhatsApp automation skill for OpenClaw via the wacli CLI for third-party messaging and history search",
+  "version": "0.1.0",
+  "skills": [
+    "skills/whatsapp"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false
+  }
+}

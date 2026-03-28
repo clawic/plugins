@@ -11,6 +11,12 @@ tests/
 !google/tests/**
 !flights/tests/
 !flights/tests/**
+!sentry/tests/
+!sentry/tests/**
+!deep-research/tests/
+!deep-research/tests/**
+!whatsapp/tests/
+!whatsapp/tests/**
 output/
 
 # Dependencies
@@ -20,6 +26,12 @@ node_modules/
 dist/
 !flights/dist/
 !flights/dist/**
+!sentry/dist/
+!sentry/dist/**
+!deep-research/dist/
+!deep-research/dist/**
+!whatsapp/dist/
+!whatsapp/dist/**
 
 # OS files
 .DS_Store

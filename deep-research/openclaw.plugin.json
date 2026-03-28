@@ -1,0 +1,13 @@
+{
+  "id": "deep-research",
+  "name": "Deep Research",
+  "description": "Deep research skill for OpenClaw that conducts multi-step web investigation with current sources and explicit uncertainty",
+  "version": "0.1.0",
+  "skills": [
+    "skills/deep-research"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false
+  }
+}

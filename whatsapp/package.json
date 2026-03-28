@@ -1,0 +1,46 @@
+{
+  "name": "whatsapp",
+  "version": "0.1.0",
+  "description": "OpenClaw WhatsApp skill package powered by wacli for third-party messaging and history search",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "skills",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run tests/e2e",
+    "test:e2e": "vitest run tests/e2e"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "whatsapp",
+    "wacli"
+  ],
+  "license": "MIT",
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.3.23"
+    },
+    "build": {
+      "openclawVersion": "2026.3.23-2"
+    }
+  },
+  "dependencies": {
+    "openclaw": "^2026.3.23-2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.4"
+  }
+}

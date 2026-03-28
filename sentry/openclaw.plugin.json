@@ -1,0 +1,54 @@
+{
+  "id": "sentry",
+  "name": "Sentry",
+  "description": "Sentry API tools for listing organizations and projects and reviewing issue details inside OpenClaw",
+  "version": "0.1.0",
+  "skills": [
+    "skills/sentry"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "authToken": {
+        "type": "string",
+        "minLength": 1
+      },
+      "baseUrl": {
+        "type": "string",
+        "minLength": 1
+      },
+      "defaultOrganizationSlug": {
+        "type": "string",
+        "minLength": 1
+      },
+      "defaultProjectSlug": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "authToken"
+    ]
+  },
+  "uiHints": {
+    "authToken": {
+      "label": "Auth token",
+      "help": "Sentry API bearer token with read access to organizations, projects, and issues",
+      "sensitive": true,
+      "placeholder": "your-sentry-auth-token"
+    },
+    "baseUrl": {
+      "label": "Base URL",
+      "help": "Defaults to https://sentry.io and also supports self-hosted Sentry instances"
+    },
+    "defaultOrganizationSlug": {
+      "label": "Default organization slug",
+      "help": "Used when sentry_list_projects, sentry_list_issues, or sentry_get_issue omit organizationSlug"
+    },
+    "defaultProjectSlug": {
+      "label": "Default project slug",
+      "help": "Applied when sentry_list_issues is called without an explicit projectSlug"
+    }
+  }
+}
