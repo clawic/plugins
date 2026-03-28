@@ -1,7 +1,7 @@
 {
-  "name": "tasks",
-  "version": "0.1.1",
-  "description": "Native OpenClaw tasks plugin with local task storage and planning tools",
+  "name": "real-estate",
+  "version": "0.1.0",
+  "description": "Native OpenClaw real-estate plugin with local workflow storage and planning tools",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -20,8 +20,8 @@
   "keywords": [
     "openclaw",
     "plugin",
-    "tasks",
-    "todo"
+    "real-estate",
+    "workflow"
   ],
   "license": "MIT",
   "openclaw": {

@@ -7,6 +7,8 @@ tests/
 !notes/tests/**
 !memory/tests/
 !memory/tests/**
+!google/tests/
+!google/tests/**
 output/
 
 # Dependencies

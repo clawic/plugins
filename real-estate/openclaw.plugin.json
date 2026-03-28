@@ -1,10 +1,10 @@
 {
-  "id": "tasks",
-  "name": "Tasks",
-  "description": "Local task management for OpenClaw with projects, priorities, agenda views, and recurring tasks",
-  "version": "0.1.1",
+  "id": "real-estate",
+  "name": "Real Estate",
+  "description": "Local workflow management for OpenClaw with projects, priorities, agenda views, and recurring tasks",
+  "version": "0.1.0",
   "skills": [
-    "skills/tasks"
+    "skills/real-estate"
   ],
   "configSchema": {
     "type": "object",
@@ -32,7 +32,7 @@
     "storagePath": {
       "label": "Storage path",
       "help": "JSON file used to persist task data locally",
-      "placeholder": "~/.openclaw/state/tasks/tasks.json"
+      "placeholder": "~/.openclaw/state/real-estate/real-estate.json"
     },
     "defaultProject": {
       "label": "Default project",

@@ -1,0 +1,94 @@
+{
+  "id": "google",
+  "name": "Google",
+  "description": "Google web search provider for OpenClaw backed by SerpApi",
+  "version": "0.1.0",
+  "skills": [
+    "skills/google"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "webSearch": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "apiKey": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "location": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 2
+          },
+          "language": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 8
+          },
+          "safeSearch": {
+            "type": "string",
+            "enum": [
+              "active",
+              "off"
+            ]
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+          },
+          "timeoutSeconds": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 60
+          },
+          "cacheTtlMinutes": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1440
+          }
+        }
+      }
+    }
+  },
+  "uiHints": {
+    "webSearch.apiKey": {
+      "label": "SerpApi key",
+      "help": "API key used for Google searches through SerpApi",
+      "sensitive": true,
+      "placeholder": "your-serpapi-key"
+    },
+    "webSearch.location": {
+      "label": "Default location",
+      "help": "Applied to searches when no location is passed to web_search"
+    },
+    "webSearch.country": {
+      "label": "Default country",
+      "help": "Two-letter Google country code such as US or ES"
+    },
+    "webSearch.language": {
+      "label": "Default language",
+      "help": "Google UI language code such as en or es"
+    },
+    "webSearch.safeSearch": {
+      "label": "SafeSearch",
+      "help": "Default SafeSearch mode for Google results"
+    },
+    "webSearch.count": {
+      "label": "Default result count",
+      "help": "How many search results web_search should return by default"
+    }
+  }
+}

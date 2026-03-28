@@ -50,6 +50,7 @@ describe("memory plugin e2e", () => {
     const packageJsonPath = path.resolve(import.meta.dirname, "../../package.json");
     const manifestPath = path.resolve(import.meta.dirname, "../../openclaw.plugin.json");
     const packageJson = JSON.parse(await readFile(packageJsonPath, "utf8")) as {
+      name: string;
       version: string;
       openclaw?: {
         compat?: {
@@ -58,9 +59,12 @@ describe("memory plugin e2e", () => {
       };
     };
     const manifest = JSON.parse(await readFile(manifestPath, "utf8")) as {
+      id: string;
       version?: string;
     };
 
+    expect(packageJson.name).toBe("memory");
+    expect(manifest.id).toBe("memory");
     expect(packageJson.openclaw?.compat?.pluginApi).toBe(">=2026.3.23");
     expect(manifest.version).toBe(packageJson.version);
   });

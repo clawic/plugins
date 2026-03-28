@@ -1,0 +1,46 @@
+{
+  "id": "cloudflare",
+  "name": "Cloudflare",
+  "description": "Cloudflare API tools for zone lookup, DNS record changes, and cache purge inside OpenClaw",
+  "version": "0.1.0",
+  "skills": [
+    "skills/cloudflare"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiToken": {
+        "type": "string",
+        "minLength": 1
+      },
+      "defaultZoneId": {
+        "type": "string",
+        "minLength": 1
+      },
+      "defaultAccountId": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "apiToken"
+    ]
+  },
+  "uiHints": {
+    "apiToken": {
+      "label": "API token",
+      "help": "Cloudflare API token with zone read and any write scopes required by the tools you plan to use",
+      "sensitive": true,
+      "placeholder": "your-cloudflare-api-token"
+    },
+    "defaultZoneId": {
+      "label": "Default zone id",
+      "help": "Used when DNS or cache tools are called without an explicit zoneId"
+    },
+    "defaultAccountId": {
+      "label": "Default account id",
+      "help": "Applied as the default filter when listing zones"
+    }
+  }
+}

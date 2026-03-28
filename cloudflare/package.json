@@ -1,7 +1,7 @@
 {
-  "name": "tasks",
-  "version": "0.1.1",
-  "description": "Native OpenClaw tasks plugin with local task storage and planning tools",
+  "name": "cloudflare",
+  "version": "0.1.0",
+  "description": "Native OpenClaw Cloudflare plugin for zones, DNS records, and cache purge workflows",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -20,8 +20,9 @@
   "keywords": [
     "openclaw",
     "plugin",
-    "tasks",
-    "todo"
+    "cloudflare",
+    "dns",
+    "cache"
   ],
   "license": "MIT",
   "openclaw": {
@@ -30,6 +31,9 @@
     ],
     "compat": {
       "pluginApi": ">=2026.3.23"
+    },
+    "build": {
+      "openclawVersion": "2026.3.23-2"
     }
   },
   "dependencies": {
