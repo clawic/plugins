@@ -1,13 +1,25 @@
 {
   "id": "deep-research",
   "name": "Deep Research",
-  "description": "Deep research skill for OpenClaw that conducts multi-step web investigation with current sources and explicit uncertainty",
+  "description": "Local deep research workspace for OpenClaw with research sessions, captured sources, phase tracking, and synthesis history",
   "version": "0.1.0",
   "skills": [
     "skills/deep-research"
   ],
   "configSchema": {
     "type": "object",
-    "additionalProperties": false
+    "additionalProperties": false,
+    "properties": {
+      "storagePath": {
+        "type": "string"
+      }
+    }
+  },
+  "uiHints": {
+    "storagePath": {
+      "label": "Storage path",
+      "help": "JSON file used to persist deep research sessions locally",
+      "placeholder": "~/.openclaw/state/deep-research/research.json"
+    }
   }
 }

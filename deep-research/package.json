@@ -1,7 +1,7 @@
 {
   "name": "deep-research",
   "version": "0.1.0",
-  "description": "OpenClaw deep research skill package for sourced multi-step web investigation with current results",
+  "description": "Native OpenClaw deep research plugin with local research state, source capture, and synthesis tools",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -21,7 +21,8 @@
     "openclaw",
     "plugin",
     "research",
-    "web"
+    "web",
+    "knowledge"
   ],
   "license": "MIT",
   "openclaw": {
@@ -36,6 +37,7 @@
     }
   },
   "dependencies": {
+    "@sinclair/typebox": "^0.34.48",
     "openclaw": "^2026.3.23-2"
   },
   "devDependencies": {
