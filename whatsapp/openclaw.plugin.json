@@ -1,13 +1,57 @@
 {
   "id": "whatsapp",
   "name": "WhatsApp",
-  "description": "WhatsApp automation skill for OpenClaw via the wacli CLI for third-party messaging and history search",
-  "version": "0.1.0",
+  "description": "WhatsApp tools for OpenClaw via the local wacli CLI, including chat lookup, message search, diagnostics, backfill, and explicit sends",
+  "version": "0.1.1",
   "skills": [
     "skills/whatsapp"
   ],
   "configSchema": {
     "type": "object",
-    "additionalProperties": false
+    "additionalProperties": false,
+    "properties": {
+      "wacliPath": {
+        "type": "string"
+      },
+      "storePath": {
+        "type": "string"
+      },
+      "requireExplicitSendConfirmation": {
+        "type": "boolean"
+      },
+      "defaultChatListLimit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 200
+      },
+      "defaultMessageSearchLimit": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 200
+      }
+    }
+  },
+  "uiHints": {
+    "wacliPath": {
+      "label": "wacli path",
+      "help": "Absolute path to the wacli binary when it is not available on PATH",
+      "placeholder": "/opt/homebrew/bin/wacli"
+    },
+    "storePath": {
+      "label": "Store path",
+      "help": "Override the default ~/.wacli data directory"
+    },
+    "requireExplicitSendConfirmation": {
+      "label": "Require send confirmation",
+      "help": "When enabled, send tools require confirm=true before a real message is sent"
+    },
+    "defaultChatListLimit": {
+      "label": "Default chat limit",
+      "help": "Default number of chats returned by whatsapp_chats_list"
+    },
+    "defaultMessageSearchLimit": {
+      "label": "Default search limit",
+      "help": "Default number of messages returned by whatsapp_messages_search"
+    }
   }
 }

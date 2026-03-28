@@ -1,7 +1,7 @@
 {
   "name": "whatsapp",
-  "version": "0.1.0",
-  "description": "OpenClaw WhatsApp skill package powered by wacli for third-party messaging and history search",
+  "version": "0.1.1",
+  "description": "OpenClaw WhatsApp plugin powered by wacli for chat lookup, message search, diagnostics, backfill, and explicit sends",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -36,6 +36,7 @@
     }
   },
   "dependencies": {
+    "@sinclair/typebox": "^0.34.48",
     "openclaw": "^2026.3.23-2"
   },
   "devDependencies": {
