@@ -5,6 +5,9 @@ tests/
 **/tests/
 !notes/tests/
 !notes/tests/**
+!memory/tests/
+!memory/tests/**
+output/
 
 # Dependencies
 node_modules/

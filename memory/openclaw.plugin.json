@@ -1,0 +1,32 @@
+{
+  "id": "memory",
+  "name": "Memory",
+  "description": "Local memory store for OpenClaw with topics, tags, reinforcement history, and recall",
+  "version": "0.1.0",
+  "skills": [
+    "skills/memory"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "storagePath": {
+        "type": "string"
+      },
+      "defaultTopic": {
+        "type": "string"
+      }
+    }
+  },
+  "uiHints": {
+    "storagePath": {
+      "label": "Storage path",
+      "help": "JSON file used to persist memory data locally",
+      "placeholder": "~/.openclaw/state/memory/memory.json"
+    },
+    "defaultTopic": {
+      "label": "Default topic",
+      "help": "Applied when new memories are created without an explicit topic"
+    }
+  }
+}
