@@ -1,0 +1,31 @@
+{
+  "id": "notes",
+  "name": "Notes",
+  "description": "Local notes for OpenClaw with notebooks, tags, append history, and search",
+  "skills": [
+    "skills/notes"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "storagePath": {
+        "type": "string"
+      },
+      "defaultNotebook": {
+        "type": "string"
+      }
+    }
+  },
+  "uiHints": {
+    "storagePath": {
+      "label": "Storage path",
+      "help": "JSON file used to persist note data locally",
+      "placeholder": "~/.openclaw/state/notes/notes.json"
+    },
+    "defaultNotebook": {
+      "label": "Default notebook",
+      "help": "Applied when new notes are created without an explicit notebook"
+    }
+  }
+}

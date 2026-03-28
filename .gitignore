@@ -3,6 +3,8 @@ AGENTS.md
 scripts/
 tests/
 **/tests/
+!notes/tests/
+!notes/tests/**
 
 # Dependencies
 node_modules/
