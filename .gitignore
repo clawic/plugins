@@ -9,6 +9,8 @@ tests/
 !memory/tests/**
 !google/tests/
 !google/tests/**
+!flights/tests/
+!flights/tests/**
 output/
 
 # Dependencies
@@ -16,6 +18,8 @@ node_modules/
 
 # Build output
 dist/
+!flights/dist/
+!flights/dist/**
 
 # OS files
 .DS_Store

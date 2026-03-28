@@ -1,0 +1,13 @@
+{
+  "id": "flights",
+  "name": "Flights",
+  "description": "Flight research skill for OpenClaw that compares current routes, fares, baggage, and booking details with web_search",
+  "version": "0.1.0",
+  "skills": [
+    "skills/flights"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false
+  }
+}
