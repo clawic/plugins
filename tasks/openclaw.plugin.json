@@ -1,0 +1,49 @@
+{
+  "id": "tasks",
+  "name": "Tasks",
+  "description": "Local task management for OpenClaw with projects, priorities, agenda views, and recurring tasks",
+  "skills": [
+    "skills/tasks"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "storagePath": {
+        "type": "string"
+      },
+      "defaultProject": {
+        "type": "string"
+      },
+      "agendaHorizonDays": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 365
+      },
+      "autoArchiveCompletedDays": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 3650
+      }
+    }
+  },
+  "uiHints": {
+    "storagePath": {
+      "label": "Storage path",
+      "help": "JSON file used to persist task data locally",
+      "placeholder": "~/.openclaw/state/tasks/tasks.json"
+    },
+    "defaultProject": {
+      "label": "Default project",
+      "help": "Applied when new tasks are created without an explicit project"
+    },
+    "agendaHorizonDays": {
+      "label": "Agenda horizon",
+      "help": "How many days ahead the agenda tool should inspect by default"
+    },
+    "autoArchiveCompletedDays": {
+      "label": "Auto-archive threshold",
+      "help": "Completed tasks older than this are hidden from normal views"
+    }
+  }
+}

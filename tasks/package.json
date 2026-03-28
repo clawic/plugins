@@ -1,0 +1,41 @@
+{
+  "name": "tasks",
+  "version": "0.1.0",
+  "description": "Native OpenClaw tasks plugin with local task storage and planning tools",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "skills",
+    "openclaw.plugin.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run tests/e2e",
+    "test:e2e": "vitest run tests/e2e"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "tasks",
+    "todo"
+  ],
+  "license": "MIT",
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ]
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.48",
+    "openclaw": "^2026.3.23-2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.4"
+  }
+}
